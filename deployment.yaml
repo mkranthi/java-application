@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: kmannedev/javaimageversion1:v1.0
+        image: kmannedev/java-imageversion3:v1.0
         ports:
         - containerPort: 80
