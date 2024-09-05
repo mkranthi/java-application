@@ -12,7 +12,7 @@ COPY my-app/src ./src
 RUN mvn clean package -DskipTests
 
 # Expose the application port (update if necessary)
-EXPOSE 8080
+EXPOSE 8088
 
 # Run the JAR file from the target folder
 #CMD ["java", "-jar", "target/my-app-1.0-SNAPSHOT.jar"]
