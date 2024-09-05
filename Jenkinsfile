@@ -13,12 +13,12 @@ pipeline {
         }
         stage('build image from Dockerfile') {
             steps {
-                sh 'docker build -t java-imageversion2 .'
+                sh 'docker build -t java-imageversion3 .'
             }
         }
         stage('tag the image') {
             steps {
-                sh 'docker tag java-imageversion2 kmannedev/java-imageversion2:v1.0'
+                sh 'docker tag java-imageversion3 kmannedev/java-imageversion3:v1.0'
             }
         }
         stage('kubectl ') {
