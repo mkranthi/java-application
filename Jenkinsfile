@@ -18,7 +18,7 @@ pipeline {
         }
         stage('tag the image') {
             steps {
-                sh 'docker tag java-imageversion2 kmannedev/javai-mageversion2:v1.0'
+                sh 'docker tag java-imageversion2 kmannedev/java-imageversion2:v1.0'
             }
         }
         stage('kubectl ') {
