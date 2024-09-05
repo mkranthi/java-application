@@ -15,4 +15,7 @@ RUN mvn clean package -DskipTests
 EXPOSE 8080
 
 # Run the JAR file from the target folder
-CMD ["java", "-jar", "target/my-app-1.0-SNAPSHOT.jar"]
+#CMD ["java", "-jar", "target/my-app-1.0-SNAPSHOT.jar"]
+
+
+#CMD ["java", "-jar", "/path/to/your/application.jar"]
