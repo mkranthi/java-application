@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build with Maven') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn -f my-app/pom.xml clean package'
             }
         }
         stage('build image from Dockerfile') {
