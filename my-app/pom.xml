@@ -43,8 +43,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>com.example.App</mainClass> <!-- Ensure the correct main class -->
+                            <mainClass>com.example.App</mainClass> <!-- Ensure this is your main class -->
                         </manifest>
                     </archive>
                 </configuration>
