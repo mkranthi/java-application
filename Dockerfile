@@ -5,16 +5,20 @@ FROM maven:3.8.7-eclipse-temurin-17
 WORKDIR /app
 
 # Copy the pom.xml and source code into the container
-COPY my-app/pom.xml .
-COPY my-app/src ./src
+COPY pom.xml .
+COPY src ./src
 
 # Package the application (skip tests for faster build)
 RUN mvn clean package -DskipTests
 
-# Expose the application port (update if necessary)
+# Change the working directory to where the JAR is located
+WORKDIR /app/target
+
+# Expose the application port (adjust as per your app)
 EXPOSE 8088
 
 # Run the JAR file from the target folder
-CMD ["java", "-jar", "/target/my-app-1.0-SNAPSHOT.jar"]
+CMD ["java", "-jar", "helloworld-1.0-SNAPSHOT.jar"]
+
 
 
