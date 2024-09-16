@@ -13,14 +13,14 @@ pipeline {
         }
         stage('build image from Dockerfile') {
             steps {
-                sh 'docker build -t java-imageversion3 .'
+                sh 'docker build -t java-imageversion4 .'
             }
         }
         stage('tag the image') {
             steps {
-                sh 'docker tag java-imageversion3 kmannedev/java-imageversion3:v1.0'
+                sh 'docker tag java-imageversion4 kmannedev/java-imageversion4:v1.0'
                 
-                sh 'docker push kmannedev/java-imageversion3:v1.0'
+                sh 'docker push kmannedev/java-imageversion4:v1.0'
             }
         }
         stage('kubectl ') {
