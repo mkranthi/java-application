@@ -1,24 +1,7 @@
-# Use Maven image to build and run the application
-FROM maven:3.8.7-eclipse-temurin-17
+FROM openjdk:11-alpine
 
-# Set the working directory inside the container
 WORKDIR /app
 
-# Copy the pom.xml and source code into the container
-COPY my-app/pom.xml .
-COPY my-app/src ./src
+COPY HelloWorld.jar /app/
 
-# Package the application (skip tests for faster build)
-RUN mvn clean package -DskipTests
-
-# Change the working directory to where the JAR is located
-WORKDIR /my-app/target
-
-# Expose the application port (adjust as per your app)
-EXPOSE 8088
-
-# Run the JAR file from the target folder
-CMD ["java", "-jar", "helloworld-1.0-SNAPSHOT.jar"]
-
-
-
+CMD ["java", "-jar", "HelloWorld.jar"]
