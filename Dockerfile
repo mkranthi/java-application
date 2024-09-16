@@ -8,4 +8,4 @@ WORKDIR /app
 COPY HelloWorld.jar /app/
 
 # Command to run the JAR file
-CMD ["java", "-jar", "HelloWorld.jar"]
+CMD ["java", "-jar", "HelloWorld.java"]
