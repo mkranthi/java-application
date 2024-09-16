@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: my-java-app
-        image: my-java-app:latest
+        image: kmannedev/my-java-app
         ports:
         - containerPort: 8080
